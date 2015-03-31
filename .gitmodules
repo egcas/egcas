@@ -1,0 +1,6 @@
+[submodule "egCAS"]
+	path = egCAS
+	url = https://github.com/majojoe/egCAS.git
+[submodule "libmml_egcas"]
+	path = libmml_egcas
+	url = ../libmml_egcas.git
