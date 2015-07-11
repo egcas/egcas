@@ -1,0 +1,8 @@
+Dependencies to install for development:
+
+- Kubuntu 14.04 LTS
+- install Qt Creator 2.0.2 (Qt 5.5)
+- sudo apt-get install flex bison build-essential cmake maxima python-pip ssh git
+- sudo pip install cogapp
+
+
