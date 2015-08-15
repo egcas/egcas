@@ -9,10 +9,8 @@ Dependencies to install for development:
   - cmake .. -DCMAKE_PREFIX_PATH=/opt/Qt/5.5/gcc_64/
   - make
 
-
   
-  
-Building with MXE:
+Building with MXE (crosscompiling for windows):
 apt-get install autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby scons sed unzip wget xz-utils g++-multilib libc6-dev-i386
 git clone https://github.com/mxe/mxe.git
 cd mxe
@@ -24,3 +22,25 @@ cd /where egcas is cloned /egcas-meta
 cd build
 cmake .. -DCMAKE_TOOLCHAIN_FILE=/"${MXE_INSTALL_PATH}"/mxe/usr/x86_64-w64-mingw32.shared/share/cmake/mxe-conf.cmake
 make
+To run the resulting exe under windows, the following dll's are necessary:
+libfreetype-6.dll    
+libglib-2.0-0.dll  
+libharfbuzz-icu-0.dll  
+libintl-8.dll    
+libpcre16-0.dll  
+libpng16-16.dll  
+platforms    (is the subdirectory from Qt5/plugins/platforms)
+Qt5Gui.dll  
+Qt5Test.dll     
+Qt5Xml.dll
+libbz2.dll  
+libgcc_s_sjlj-1.dll  
+libharfbuzz-1.dll  (must be renamed from libharfbuzz-0.dll)
+libiconv-2.dll         
+libmmlegcas.dll  
+libpcre-1.dll    
+libstdc++-6.dll  
+Qt5Core.dll  
+Qt5Svg.dll  
+Qt5Widgets.dll  
+zlib1.dll
