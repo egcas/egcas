@@ -9,6 +9,13 @@ Dependencies to install for development:
   - cmake .. -DCMAKE_PREFIX_PATH=/opt/Qt/5.5/gcc_64/
   - make
   
+
+Search for bugs with clang static analysis:
+================================================
+ATTENTION: This does NOT work on (K)Ubuntu 14.04LTS!!! However it works with Kubuntu 15.10 ...
+- clang must be installed
+start static analysis with following command in main directory:
+./static_analysis.sh
   
 Building with MXE (crosscompiling for windows):
 ================================================
