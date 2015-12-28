@@ -52,3 +52,8 @@ Qt5Core.dll
 Qt5Svg.dll  
 Qt5Widgets.dll  
 zlib1.dll
+
+
+switch to clang on linux (for compilation):
+================================================
+sudo update-alternatives --config c++
