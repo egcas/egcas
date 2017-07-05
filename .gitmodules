@@ -4,3 +4,6 @@
 [submodule "libmml_egcas"]
 	path = libmml_egcas
 	url = ../libmml_egcas.git
+[submodule "egcas_maxima"]
+	path = egcas_maxima
+	url = ../egcas_maxima.git
