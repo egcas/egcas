@@ -11,4 +11,4 @@ sudo apt-get install python-pip
 sudo apt-get install cmake
 pip install cogapp
 
-anything forgotten?
+
