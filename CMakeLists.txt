@@ -11,7 +11,7 @@ add_subdirectory(egcas_maxima)
 
 set(CPACK_PACKAGE_NAME "egcas")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "* egcas is a Easy to use Graphical Computer Algebra System.")
-set(CPACK_DEBIAN_PACKAGE_DEPENDS libmmlegcas libqt5widgets5 libqt5xml5 libqt5printsupport5)
+set(CPACK_DEBIAN_PACKAGE_DEPENDS libqt5widgets5 libqt5xml5 libqt5printsupport5)
 if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         install(PROGRAMS ${CMAKE_BINARY_DIR}/${MAXIMA_INST_PATH}/usr/bin/egcas-maxima DESTINATION /usr/bin/)
         install(DIRECTORY ${CMAKE_BINARY_DIR}/${MAXIMA_INST_PATH}/usr/bin/egcas DESTINATION /usr/bin/ PATTERN * PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
