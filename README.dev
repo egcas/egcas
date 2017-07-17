@@ -17,7 +17,7 @@ create e.g. a debian package:
 use different maxima kernel
 ===========================
 To use a maxima kernel from a different installation path (not from package provided) the following environment variable must be set (including maxima binary):
-MAXIMA_BINARY_PATH=/usrb/bin/maxima
+MAXIMA_BINARY_PATH=/usr/bin/maxima
 
 Search for bugs with clang static analysis:
 ================================================
