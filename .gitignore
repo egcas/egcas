@@ -1,3 +1,5 @@
 /build/
 *.txt.user
 /build_make/
+/build_win/
+/build_mxe/

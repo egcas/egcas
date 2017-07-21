@@ -1,6 +1,6 @@
 Dependencies to install for development:
 ========================================
-- Kubuntu 14.04 LTS
+- Kubuntu 14.04 LTS or 16.04
 - install Qt Creator 2.0.2 (Qt 5.5)
 - sudo apt-get install flex bison build-essential cmake maxima python-pip ssh git libglu1-mesa-dev freeglut3-dev mesa-common-dev libboost-dev
 - sudo pip install cogapp
@@ -26,41 +26,13 @@ ATTENTION: This does NOT work on (K)Ubuntu 14.04LTS!!! However it works with Kub
 start static analysis with following command in main directory:
 ./static_analysis.sh
   
-Building with MXE (crosscompiling for windows):
+Building with MXE (crosscompiling for windows) on Ubuntu 16.04 64bit:
 ================================================
-apt-get install autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby scons sed unzip wget xz-utils g++-multilib libc6-dev-i386
-git clone https://github.com/mxe/mxe.git
-cd mxe
-MXE_INSTALL_PATH=${PWD}
-make MXE_TARGETS='x86_64-w64-mingw32.shared' cmake flex bison qt5 gcc gdb boost make nsis 
-export PATH="${MXE_INSTALL_PATH}"/usr/bin:$PATH
-cp /usr/include/FlexLexer.h "${MXE_INSTALL_PATH}"/usr/x86_64-w64-mingw32.shared/include/
-cd /where egcas is cloned /egcas-meta
-cd build
-cmake .. -DCMAKE_TOOLCHAIN_FILE=/"${MXE_INSTALL_PATH}"/mxe/usr/x86_64-w64-mingw32.shared/share/cmake/mxe-conf.cmake
-make
-To run the resulting exe under windows, the following dll's are necessary:
-libfreetype-6.dll    
-libglib-2.0-0.dll  
-libharfbuzz-icu-0.dll  
-libintl-8.dll    
-libpcre16-0.dll  
-libpng16-16.dll  
-platforms    (is the subdirectory from Qt5/plugins/platforms)
-Qt5Gui.dll  
-Qt5Test.dll     
-Qt5Xml.dll
-libbz2.dll  
-libgcc_s_sjlj-1.dll  
-libharfbuzz-1.dll  (must be renamed from libharfbuzz-0.dll)
-libiconv-2.dll         
-libmmlegcas.dll  
-libpcre-1.dll    
-libstdc++-6.dll  
-Qt5Core.dll  
-Qt5Svg.dll  
-Qt5Widgets.dll  
-zlib1.dll
+To setup the neccessary mxe environment for windows crosscompiling, execute setup_mxe.sh in the win subdirectory.
+As next step the cmake build environment has to be set up. For this to setup execute cmake_win.sh also in the win subdirectory.
+
+Now the required targets can be built in the generated build directory "build_win" as usual:
+e.g. "make egCAS"
 
 
 switch to clang on linux (for compilation):
