@@ -64,7 +64,9 @@ cp "${MXE_COMMON_INSTALL_PATH}/bin/libharfbuzz-0.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libiconv-2.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libpcre-1.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libstdc++-6.dll" .
-cp "${MXE_COMMON_INSTALL_PATH}/bin/zlib1.dll" .    
+cp "${MXE_COMMON_INSTALL_PATH}/bin/zlib1.dll" .   
+cd bin
+${SCR_BASE_DIR}/helper/make_links.sh
   
 echo "mxe setup successful!"
 
