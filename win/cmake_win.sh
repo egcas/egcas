@@ -26,7 +26,7 @@ source "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 cd "${EGCAS_META_DIR}"
 mkdir "${WIN_BUILD_DIR}"
 cd "${WIN_BUILD_DIR}"
-x86_64-w64-mingw32.shared-cmake -DCMAKE_PREFIX_PATH="${MXE_QT_INSTALL_PATH}" ..
+i686-w64-mingw32.shared-cmake -DCMAKE_PREFIX_PATH="${MXE_QT_INSTALL_PATH}" ..
   
 echo "cmake environment setup successful!"
 echo ""

@@ -27,17 +27,17 @@ cd "${MXE_BUILD_DIR}"
 git clone https://github.com/mxe/mxe.git
 cd mxe
 MXE_INSTALL_PATH=${PWD}
-make -j4 MXE_TARGETS='x86_64-w64-mingw32.shared' cmake qt5 gcc gdb boost nsis 
+make -j4 MXE_TARGETS='i686-w64-mingw32.shared' cmake qt5 gcc gdb boost nsis 
 
 #setup config vars and write config file
 echo export MXE_INSTALL_PATH="${MXE_INSTALL_PATH}" >> "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 echo export PATH="${MXE_INSTALL_PATH}"/usr/bin:${PATH} >> "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
-echo export MXE_COMMON_INSTALL_PATH="${MXE_INSTALL_PATH}/usr/x86_64-w64-mingw32.shared/" >> "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
+echo export MXE_COMMON_INSTALL_PATH="${MXE_INSTALL_PATH}/usr/i686-w64-mingw32.shared/" >> "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 source "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 echo export MXE_QT_INSTALL_PATH="${MXE_COMMON_INSTALL_PATH}/qt5/" >> "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 source "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 
-cp /usr/include/FlexLexer.h "${MXE_INSTALL_PATH}"/usr/x86_64-w64-mingw32.shared/include/
+cp /usr/include/FlexLexer.h "${MXE_INSTALL_PATH}"/usr/i686-w64-mingw32.shared/include/
 
 # copy runtime libraries to runtime pos
 cd "${MXE_ABS_BUILD_DIR}"
@@ -59,7 +59,7 @@ cp "${MXE_COMMON_INSTALL_PATH}/bin/libintl-8.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libpcre16-0.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libpng16-16.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libbz2.dll" .
-cp "${MXE_COMMON_INSTALL_PATH}/bin/libgcc_s_seh-1.dll" .
+cp "${MXE_COMMON_INSTALL_PATH}/bin/libgcc_s_sjlj-1.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libharfbuzz-0.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libiconv-2.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libpcre-1.dll" .
