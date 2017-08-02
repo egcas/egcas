@@ -65,6 +65,7 @@ cp "${MXE_COMMON_INSTALL_PATH}/bin/libiconv-2.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libpcre-1.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libstdc++-6.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/zlib1.dll" .   
+cp "${MXE_COMMON_INSTALL_PATH}/bin/libpcre2-16-0.dll" .   
 cd bin
 ${SCR_BASE_DIR}/helper/make_links.sh
   

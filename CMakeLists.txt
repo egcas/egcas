@@ -6,8 +6,9 @@ set(MAXIMA_INST_PATH maxima_installation)
 
 add_subdirectory(libmml_egcas)
 add_subdirectory(egCAS)
-add_subdirectory(egcas_maxima)
-
+if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+        add_subdirectory(egcas_maxima)
+endif()
 
 set(CPACK_PACKAGE_NAME "egcas")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "* egcas is a Easy to use Graphical Computer Algebra System.")
@@ -32,7 +33,7 @@ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
         set(CPACK_NSIS_MUI_ICON "${CMAKE_SOURCE_DIR}/egCAS/egCAS/src/res/egcas.ico")
         set(CPACK_NSIS_MUI_UNIICON "${CMAKE_SOURCE_DIR}/egCAS/egCAS/src/res/egcas.ico")
 
-        set(CPACK_NSIS_MENU_LINKS "programs\\egcas" "EgCAS")
+        set(CPACK_NSIS_MENU_LINKS "programs\\\\egcas" "EgCAS")
 
 endif()
 set(CPACK_PACKAGE_VERSION "0.0.2")
