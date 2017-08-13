@@ -37,6 +37,12 @@ As next step the cmake build environment has to be set up. For this to setup exe
 Now the required targets can be built in the generated build directory "build_win" as usual:
 e.g. "make egCAS"
 
+Building under windows (only egcas until now)
+=============================================
+Install chocolatey package management. Install in chocolatey the winflexbison2 and pyhton2 package.
+Install Qt Creator (choose mingw as compiler during installation).
+execute pip install cogapp on command line.
+
 
 switch to clang on linux (for compilation):
 ================================================
