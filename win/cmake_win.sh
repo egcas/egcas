@@ -27,9 +27,10 @@ cd "${EGCAS_META_DIR}"
 mkdir "${WIN_BUILD_DIR}"
 cd "${WIN_BUILD_DIR}"
 "${MXE_ABS_BUILD_DIR}/mxe/usr/bin/i686-w64-mingw32.shared-cmake" -DCMAKE_PREFIX_PATH="${MXE_QT_INSTALL_PATH}" ..
-  
+
+
 echo "cmake environment setup successful!"
 echo ""
-echo "build egcas now with \"make TARGET\""
+echo "go to build directory ${WIN_BUILD_DIR} now and build egcas now with \"make TARGET\""
 echo ""
 
