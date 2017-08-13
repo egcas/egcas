@@ -1,7 +1,15 @@
 cmake_minimum_required(VERSION 2.8.11)
 
+##############################################################################
+
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_VERBOSE_MAKEFILE ON)
+set(EGCAS_VERSION "0.0.1")
+
+##############################################################################
+##############################################################################
+# set egcas version as define for C++ program
+add_definitions(-DEGCAS_VERSION="${EGCAS_VERSION}")
 set(MAXIMA_INST_PATH maxima_installation)
 
 add_subdirectory(libmml_egcas)
@@ -31,10 +39,10 @@ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
         set(CPACK_NSIS_MUI_ICON "${CMAKE_SOURCE_DIR}/egCAS/egCAS/src/res/egcas.ico")
         set(CPACK_NSIS_MUI_UNIICON "${CMAKE_SOURCE_DIR}/egCAS/egCAS/src/res/egcas.ico")
 
-        set(CPACK_NSIS_MENU_LINKS "programs\\\\egcas" "EgCAS")
-
+        set(CPACK_NSIS_MENU_LINKS "bin\\egcas.exe" "EgCAS"
+                                  "Uninstall.exe" "uninstall EgCAS")
 endif()
-set(CPACK_PACKAGE_VERSION "0.0.2")
+set(CPACK_PACKAGE_VERSION ${EGCAS_VERSION})
 
 include(CPack)
 
