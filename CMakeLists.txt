@@ -35,9 +35,9 @@ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
         set(CPACK_COMPONENT_APPLICATIONS_DISPLAY_NAME "EgCAS")
         set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/egCAS/LICENSE")
 
-        set(CPACK_PACKAGE_ICON "${CMAKE_SOURCE_DIR}/egCAS/egCAS/src/res/egcas.bmp")
-        set(CPACK_NSIS_MUI_ICON "${CMAKE_SOURCE_DIR}/egCAS/egCAS/src/res/egcas.ico")
-        set(CPACK_NSIS_MUI_UNIICON "${CMAKE_SOURCE_DIR}/egCAS/egCAS/src/res/egcas.ico")
+        set(CPACK_PACKAGE_ICON "${CMAKE_SOURCE_DIR}/pics/egcas_32x32.bmp")
+        set(CPACK_NSIS_MUI_ICON "${CMAKE_SOURCE_DIR}/pics/egcas_32x32.ico")
+        set(CPACK_NSIS_MUI_UNIICON "${CMAKE_SOURCE_DIR}/pics/egcas_32x32.ico")
 
         set(CPACK_NSIS_MENU_LINKS "bin\\egcas.exe" "EgCAS"
                                   "Uninstall.exe" "uninstall EgCAS")
