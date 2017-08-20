@@ -13,7 +13,7 @@ add_definitions(-DEGCAS_VERSION="${EGCAS_VERSION}")
 set(MAXIMA_INST_PATH maxima_installation)
 
 add_subdirectory(libmml_egcas)
-add_subdirectory(egCAS)
+add_subdirectory(egcas-core)
 add_subdirectory(egcas_maxima)
 
 set(CPACK_PACKAGE_NAME "egcas")
@@ -33,7 +33,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
         set(CPACK_PACKAGE_INSTALL_DIRECTORY "egcas")
         set(CPACK_COMPONENT_APPLICATIONS_DISPLAY_NAME "EgCAS")
-        set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/egCAS/LICENSE")
+        set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/egcas-core/LICENSE")
 
         set(CPACK_PACKAGE_ICON "${CMAKE_SOURCE_DIR}/pics/egcas_32x32.bmp")
         set(CPACK_NSIS_MUI_ICON "${CMAKE_SOURCE_DIR}/pics/egcas_32x32.ico")
