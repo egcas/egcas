@@ -66,7 +66,7 @@ cp "${MXE_COMMON_INSTALL_PATH}/bin/libpcre-1.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libstdc++-6.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/zlib1.dll" .   
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libpcre2-16-0.dll" .   
-cd bin
+cd "${MXE_ABS_BUILD_DIR}/mxe/usr/bin/"
 ${SCR_BASE_DIR}/helper/make_links.sh
   
 echo "mxe setup successful!"
