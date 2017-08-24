@@ -3,7 +3,7 @@
 SCR_BASE_DIR=$(dirname "${0}")
 EGCAS_META_DIR=$(realpath "${SCR_BASE_DIR}/../")
 
-
+#MXE_VERSION="2017-02-11"
 MXE_BUILD_DIR="build_mxe"
 MXE_CONFIG_FILE="mxe_config_file.txt"
 
@@ -24,7 +24,16 @@ sudo apt-get install autoconf automake autopoint bash bison bzip2 cmake flex get
 cd "${EGCAS_META_DIR}"
 mkdir "${MXE_BUILD_DIR}"
 cd "${MXE_BUILD_DIR}"
-git clone https://github.com/mxe/mxe.git
+if [ ${MXE_VERSION} ]; then
+        wget https://github.com/mxe/mxe/archive/build-${MXE_VERSION}.tar.gz
+        tar -xzf build-${MXE_VERSION}.tar.gz
+        mv mxe-build-${MXE_VERSION} mxe
+else
+        git clone https://github.com/mxe/mxe.git
+        cd mxe
+        git checkout 487359e28300ad5601379afac2cc347f8ba22d4d
+        cd ..
+fi
 cd mxe
 MXE_INSTALL_PATH=${PWD}
 make -j4 MXE_TARGETS='i686-w64-mingw32.shared' cmake qt5 gcc gdb boost nsis 
@@ -67,7 +76,7 @@ cp "${MXE_COMMON_INSTALL_PATH}/bin/libstdc++-6.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/zlib1.dll" .   
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libpcre2-16-0.dll" .   
 cd "${MXE_ABS_BUILD_DIR}/mxe/usr/bin/"
-${SCR_BASE_DIR}/helper/make_links.sh
+"${EGCAS_META_DIR}"/win/helper/make_links.sh
   
 echo "mxe setup successful!"
 
