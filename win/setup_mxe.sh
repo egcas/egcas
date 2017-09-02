@@ -4,7 +4,7 @@ SCR_BASE_DIR=$(dirname "${0}")
 EGCAS_META_DIR=$(realpath "${SCR_BASE_DIR}/../")
 
 #MXE_VERSION="2017-02-11"
-MXE_BUILD_DIR="build_mxe"
+MXE_BUILD_DIR="build/build_mxe"
 MXE_CONFIG_FILE="mxe_config_file.txt"
 
 if ! [ -d "${EGCAS_META_DIR}/win/" ]; then

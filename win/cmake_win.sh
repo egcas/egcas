@@ -4,8 +4,8 @@ SCR_BASE_DIR=$(dirname "${0}")
 EGCAS_META_DIR=$(realpath "${SCR_BASE_DIR}/../")
 
 
-WIN_BUILD_DIR="build_win"
-MXE_BUILD_DIR="build_mxe"
+WIN_BUILD_DIR="build/build_win"
+MXE_BUILD_DIR="build/build_mxe"
 MXE_CONFIG_FILE="mxe_config_file.txt"
 
 if ! [ -d "${EGCAS_META_DIR}/win/" ]; then
@@ -24,9 +24,9 @@ fi
 cd "${EGCAS_META_DIR}/${MXE_BUILD_DIR}"
 source "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 cd "${EGCAS_META_DIR}"
-mkdir "${WIN_BUILD_DIR}"
+mkdir -p "${WIN_BUILD_DIR}"
 cd "${WIN_BUILD_DIR}"
-"${MXE_ABS_BUILD_DIR}/mxe/usr/bin/i686-w64-mingw32.shared-cmake" -DCMAKE_PREFIX_PATH="${MXE_QT_INSTALL_PATH}" ..
+"${MXE_ABS_BUILD_DIR}/mxe/usr/bin/i686-w64-mingw32.shared-cmake" -DCMAKE_PREFIX_PATH="${MXE_QT_INSTALL_PATH}" ../..
 
 
 echo "cmake environment setup successful!"
