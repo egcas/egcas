@@ -19,7 +19,7 @@ if [ -d "${MXE_ABS_BUILD_DIR}" ]; then
         exit 2
 fi
 
-sudo apt-get install autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby scons sed unzip wget xz-utils g++-multilib libc6-dev-i386 libtool-bin libgtk2.0-dev
+sudo apt-get install autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby scons sed unzip wget xz-utils g++-multilib libc6-dev-i386 libtool-bin libgtk2.0-dev nsis
 
 cd "${EGCAS_META_DIR}"
 mkdir "${MXE_BUILD_DIR}"
