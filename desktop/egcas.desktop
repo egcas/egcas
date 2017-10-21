@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=EgCAS
+Comment[en]=The easy graphic Computer Algebra System
+Exec=egcas
+Icon=/usr/share/pixmaps/egcas_32x32.png
+Terminal=false
+Type=Application
+Categories=Application;Science;Engineering;Math;
+StartupNotify=false
