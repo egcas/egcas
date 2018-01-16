@@ -1,7 +1,7 @@
 If not explicitly otherwise stated all code in this project is under the
 license below:
 
-Copyright (c) 2014, Johannes Maier <maier_jo@gmx.de>
+Copyright (c) 2014 - 2018, Johannes Maier <maier_jo@gmx.de>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
