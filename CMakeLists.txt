@@ -3,11 +3,15 @@ cmake_minimum_required(VERSION 2.8.11)
 ##############################################################################
 
 set(CMAKE_BUILD_TYPE Release)
+#set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 set(EGCAS_VERSION "0.0.2")
 
 ##############################################################################
 ##############################################################################
+if(${CMAKE_BUILD_TYPE} MATCHES "Release")
+        add_definitions(-DQT_NO_DEBUG_OUTPUT)
+endif()
 # set egcas version as define for C++ program
 add_definitions(-DEGCAS_VERSION="${EGCAS_VERSION}")
 set(MAXIMA_INST_PATH maxima_installation)
