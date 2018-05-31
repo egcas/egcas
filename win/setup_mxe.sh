@@ -62,6 +62,7 @@ cp "${MXE_QT_INSTALL_PATH}/bin/Qt5Core.dll" .
 cp "${MXE_QT_INSTALL_PATH}/bin/Qt5Svg.dll" .
 cp "${MXE_QT_INSTALL_PATH}/bin/Qt5Widgets.dll" .
 cp "${MXE_QT_INSTALL_PATH}/bin/Qt5Multimedia.dll" .
+cp "${MXE_QT_INSTALL_PATH}/bin/Qt5Network.dll" .
 cp -r "${MXE_QT_INSTALL_PATH}/plugins/platforms/" ./platforms/
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libfreetype-6.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libfreetype-6.dll" .
@@ -78,6 +79,8 @@ cp "${MXE_COMMON_INSTALL_PATH}/bin/libpcre-1.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libstdc++-6.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/zlib1.dll" .   
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libpcre2-16-0.dll" .   
+cp "${MXE_COMMON_INSTALL_PATH}/bin/libssl-1_1.dll" .   
+cp "${MXE_COMMON_INSTALL_PATH}/bin/libcrypto-1_1.dll" .   
 cd "${MXE_ABS_BUILD_DIR}/mxe/usr/bin/"
 "${EGCAS_META_DIR}"/win/helper/make_links.sh
   
