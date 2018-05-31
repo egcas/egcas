@@ -45,8 +45,9 @@ start static analysis with following command in main directory:
   
 Building with MXE (crosscompiling for windows) on Ubuntu 16.04 64bit:
 ================================================
-To setup the neccessary mxe environment for windows crosscompiling, execute setup_mxe.sh in the win subdirectory.
-As next step the cmake build environment has to be set up. For this to setup execute cmake_win.sh also in the win subdirectory.
+- To setup the neccessary mxe environment for windows crosscompiling, execute setup_mxe.sh in the win subdirectory.
+- As next step the cmake build environment has to be set up. For this to setup execute cmake_win.sh also in the win subdirectory.
+- Then execute 'source set_env.sh' in the open shell.
 
 Now the required targets can be built in the generated build directory "build_win" as usual:
 e.g. "make egCAS"
@@ -61,3 +62,13 @@ execute pip install cogapp on command line.
 switch to clang on linux (for compilation):
 ================================================
 sudo update-alternatives --config c++
+
+
+Release a new software
+================================================
+- verify that all tests work correctly: make egcas-tests-all
+- Change Version in top level CMakeLists.txt
+- Change CMAKE_BUILD_TYPE to 'Release' in top level CMakeLists.txt
+- Remove test formulas in mainwindow.cpp
+- start Release branches for all submodules (release/x.y.z)
+

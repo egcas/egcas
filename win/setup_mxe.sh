@@ -31,7 +31,9 @@ if [ ${MXE_VERSION} ]; then
 else
         git clone https://github.com/mxe/mxe.git
         cd mxe
-        git checkout 487359e28300ad5601379afac2cc347f8ba22d4d
+        #git checkout 487359e28300ad5601379afac2cc347f8ba22d4d
+        git checkout 5d4c388be33414e7a802c4959d3d22f759840587
+        #git checkout master
         cd ..
 fi
 cd mxe
@@ -59,6 +61,7 @@ cp "${MXE_QT_INSTALL_PATH}/bin/Qt5Test.dll" .
 cp "${MXE_QT_INSTALL_PATH}/bin/Qt5Core.dll" .
 cp "${MXE_QT_INSTALL_PATH}/bin/Qt5Svg.dll" .
 cp "${MXE_QT_INSTALL_PATH}/bin/Qt5Widgets.dll" .
+cp "${MXE_QT_INSTALL_PATH}/bin/Qt5Multimedia.dll" .
 cp -r "${MXE_QT_INSTALL_PATH}/plugins/platforms/" ./platforms/
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libfreetype-6.dll" .
 cp "${MXE_COMMON_INSTALL_PATH}/bin/libfreetype-6.dll" .
