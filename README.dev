@@ -16,7 +16,7 @@ Dependencies to install for development:
 ========================================
 - Kubuntu 14.04 LTS or 16.04
 - install Qt Creator 2.0.2 (Qt 5.5) from www.qt.io  OR install the following packages: sudo apt-get install qtcreator qt5-default qtmultimedia5-dev qttools5-dev
-- sudo apt-get install flex bison build-essential cmake maxima python-pip ssh git libglu1-mesa-dev freeglut3-dev mesa-common-dev libboost-dev sbcl texinfo
+- sudo apt-get install flex bison build-essential cmake maxima python-pip ssh git libglu1-mesa-dev freeglut3-dev mesa-common-dev libboost-dev sbcl texinfo imagemagick inkscape
 - sudo pip install cogapp
 - build with Qt Creator or with following commands
 on command line (cmake prefix path must be set to Qt libs installation to work):
