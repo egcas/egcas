@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 2.8.11)
 
 ##############################################################################
 
-set(CMAKE_BUILD_TYPE Release)
-#set(CMAKE_BUILD_TYPE Debug)
+#set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 set(EGCAS_VERSION "0.0.2")
 
