@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document width="2100" height="2900" version="0.0.2">
+    <text_entity font="Century Schoolbook L,50,-1,5,50,0,0,0,0,0" pos_x="116" pos_y="116">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Century Schoolbook L'; font-size:50pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This is a test text&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</text_entity>
+    <pic_entity pos_x="725" pos_y="174" width="281" height="301" path=":res/plane.png"/>
+    <formula_entity pos_x="319" pos_y="290" type="engineering" digits="0">
+        <basenode>
+            <equalnode>
+                <parenthesisnode>
+                    <plusnode>
+                        <numbernode value="1"/>
+                        <numbernode value="38"/>
+                    </plusnode>
+                </parenthesisnode>
+                <emptynode/>
+            </equalnode>
+        </basenode>
+    </formula_entity>
+    <formula_entity pos_x="232" pos_y="348" type="scientific" digits="4">
+        <basenode>
+            <equalnode>
+                <divisionnode>
+                    <plusnode>
+                        <unaryminusnode>
+                            <numbernode value="1"/>
+                        </unaryminusnode>
+                        <rootnode>
+                            <emptynode/>
+                            <argumentsnode>
+                                <numbernode value="5"/>
+                            </argumentsnode>
+                        </rootnode>
+                    </plusnode>
+                    <numbernode value="2"/>
+                </divisionnode>
+                <emptynode/>
+            </equalnode>
+        </basenode>
+    </formula_entity>
+    <formula_entity pos_x="232" pos_y="464" type="standard" digits="0">
+        <basenode>
+            <equalnode>
+                <divisionnode>
+                    <rootnode>
+                        <emptynode/>
+                        <argumentsnode>
+                            <plusnode>
+                                <numbernode value="1"/>
+                                <rootnode>
+                                    <numbernode value="3"/>
+                                    <plusnode>
+                                        <numbernode value="2"/>
+                                        <rootnode>
+                                            <numbernode value="5"/>
+                                            <plusnode>
+                                                <numbernode value="3"/>
+                                                <rootnode>
+                                                    <numbernode value="7"/>
+                                                    <plusnode>
+                                                        <numbernode value="4"/>
+                                                        <rootnode>
+                                                            <numbernode value="11"/>
+                                                            <plusnode>
+                                                                <numbernode value="5"/>
+                                                                <rootnode>
+                                                                    <numbernode value="13"/>
+                                                                    <plusnode>
+                                                                        <numbernode value="6"/>
+                                                                        <rootnode>
+                                                                            <numbernode value="17"/>
+                                                                            <plusnode>
+                                                                                <numbernode value="7"/>
+                                                                                <rootnode>
+                                                                                    <numbernode value="19"/>
+                                                                                    <variablenode value="A" subscript=""/>
+                                                                                </rootnode>
+                                                                            </plusnode>
+                                                                        </rootnode>
+                                                                    </plusnode>
+                                                                </rootnode>
+                                                            </plusnode>
+                                                        </rootnode>
+                                                    </plusnode>
+                                                </rootnode>
+                                            </plusnode>
+                                        </rootnode>
+                                    </plusnode>
+                                </rootnode>
+                            </plusnode>
+                        </argumentsnode>
+                    </rootnode>
+                    <exponentnode>
+                        <variablenode value="ⅇ" subscript=""/>
+                        <variablenode value="π" subscript=""/>
+                    </exponentnode>
+                </divisionnode>
+                <emptynode/>
+            </equalnode>
+        </basenode>
+    </formula_entity>
+    <formula_entity pos_x="232" pos_y="609" type="standard" digits="0">
+        <basenode>
+            <definitionnode>
+                <variablenode value="z" subscript="20"/>
+                <divisionnode>
+                    <minusnode>
+                        <variablenode value="x" subscript=""/>
+                        <numbernode value="1"/>
+                    </minusnode>
+                    <plusnode>
+                        <variablenode value="x" subscript=""/>
+                        <numbernode value="5"/>
+                    </plusnode>
+                </divisionnode>
+            </definitionnode>
+        </basenode>
+    </formula_entity>
+    <formula_entity pos_x="232" pos_y="667" type="standard" digits="0">
+        <basenode>
+            <equalnode>
+                <integralnode>
+                    <variablenode value="z" subscript="20"/>
+                    <variablenode value="x" subscript=""/>
+                </integralnode>
+                <emptynode/>
+            </equalnode>
+        </basenode>
+    </formula_entity>
+    <formula_entity pos_x="638" pos_y="667" type="standard" digits="0">
+        <basenode>
+            <equalnode>
+                <integralnode>
+                    <numbernode value="0"/>
+                    <numbernode value="10"/>
+                    <variablenode value="z" subscript="20"/>
+                    <variablenode value="x" subscript=""/>
+                </integralnode>
+                <emptynode/>
+            </equalnode>
+        </basenode>
+    </formula_entity>
+    <formula_entity pos_x="232" pos_y="754" type="standard" digits="0">
+        <basenode>
+            <equalnode>
+                <differentialnode derivative="1" differential_type="lagrange1">
+                    <variablenode value="z" subscript="20"/>
+                    <variablenode value="x" subscript=""/>
+                    <numbernode value="1"/>
+                </differentialnode>
+                <emptynode/>
+            </equalnode>
+        </basenode>
+    </formula_entity>
+    <formula_entity pos_x="638" pos_y="754" type="standard" digits="0">
+        <basenode>
+            <equalnode>
+                <differentialnode derivative="3" differential_type="lagrange3">
+                    <variablenode value="z" subscript="20"/>
+                    <variablenode value="x" subscript=""/>
+                    <numbernode value="3"/>
+                </differentialnode>
+                <emptynode/>
+            </equalnode>
+        </basenode>
+    </formula_entity>
+    <formula_entity pos_x="232" pos_y="812" type="standard" digits="0">
+        <basenode>
+            <equalnode>
+                <differentialnode derivative="5" differential_type="leibnitz">
+                    <variablenode value="z" subscript="20"/>
+                    <variablenode value="x" subscript=""/>
+                    <numbernode value="5"/>
+                </differentialnode>
+                <emptynode/>
+            </equalnode>
+        </basenode>
+    </formula_entity>
+</document>
