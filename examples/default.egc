@@ -11,8 +11,8 @@ p, li { white-space: pre-wrap; }
             <equalnode>
                 <parenthesisnode>
                     <plusnode>
-                        <numbernode value="1"/>
-                        <numbernode value="38"/>
+                        <numbernode>1</numbernode>
+                        <numbernode>38</numbernode>
                     </plusnode>
                 </parenthesisnode>
                 <emptynode/>
@@ -25,16 +25,16 @@ p, li { white-space: pre-wrap; }
                 <divisionnode>
                     <plusnode>
                         <unaryminusnode>
-                            <numbernode value="1"/>
+                            <numbernode>1</numbernode>
                         </unaryminusnode>
                         <rootnode>
                             <emptynode/>
                             <argumentsnode>
-                                <numbernode value="5"/>
+                                <numbernode>5</numbernode>
                             </argumentsnode>
                         </rootnode>
                     </plusnode>
-                    <numbernode value="2"/>
+                    <numbernode>2</numbernode>
                 </divisionnode>
                 <emptynode/>
             </equalnode>
@@ -48,33 +48,33 @@ p, li { white-space: pre-wrap; }
                         <emptynode/>
                         <argumentsnode>
                             <plusnode>
-                                <numbernode value="1"/>
+                                <numbernode>1</numbernode>
                                 <rootnode>
-                                    <numbernode value="3"/>
+                                    <numbernode>3</numbernode>
                                     <plusnode>
-                                        <numbernode value="2"/>
+                                        <numbernode>2</numbernode>
                                         <rootnode>
-                                            <numbernode value="5"/>
+                                            <numbernode>5</numbernode>
                                             <plusnode>
-                                                <numbernode value="3"/>
+                                                <numbernode>3</numbernode>
                                                 <rootnode>
-                                                    <numbernode value="7"/>
+                                                    <numbernode>7</numbernode>
                                                     <plusnode>
-                                                        <numbernode value="4"/>
+                                                        <numbernode>4</numbernode>
                                                         <rootnode>
-                                                            <numbernode value="11"/>
+                                                            <numbernode>11</numbernode>
                                                             <plusnode>
-                                                                <numbernode value="5"/>
+                                                                <numbernode>5</numbernode>
                                                                 <rootnode>
-                                                                    <numbernode value="13"/>
+                                                                    <numbernode>13</numbernode>
                                                                     <plusnode>
-                                                                        <numbernode value="6"/>
+                                                                        <numbernode>6</numbernode>
                                                                         <rootnode>
-                                                                            <numbernode value="17"/>
+                                                                            <numbernode>17</numbernode>
                                                                             <plusnode>
-                                                                                <numbernode value="7"/>
+                                                                                <numbernode>7</numbernode>
                                                                                 <rootnode>
-                                                                                    <numbernode value="19"/>
+                                                                                    <numbernode>19</numbernode>
                                                                                     <variablenode value="A" subscript=""/>
                                                                                 </rootnode>
                                                                             </plusnode>
@@ -108,11 +108,11 @@ p, li { white-space: pre-wrap; }
                 <divisionnode>
                     <minusnode>
                         <variablenode value="x" subscript=""/>
-                        <numbernode value="1"/>
+                        <numbernode>1</numbernode>
                     </minusnode>
                     <plusnode>
                         <variablenode value="x" subscript=""/>
-                        <numbernode value="5"/>
+                        <numbernode>5</numbernode>
                     </plusnode>
                 </divisionnode>
             </definitionnode>
@@ -133,8 +133,8 @@ p, li { white-space: pre-wrap; }
         <basenode>
             <equalnode>
                 <integralnode>
-                    <numbernode value="0"/>
-                    <numbernode value="10"/>
+                    <numbernode>0</numbernode>
+                    <numbernode>10</numbernode>
                     <variablenode value="z" subscript="20"/>
                     <variablenode value="x" subscript=""/>
                 </integralnode>
@@ -148,7 +148,7 @@ p, li { white-space: pre-wrap; }
                 <differentialnode derivative="1" differential_type="lagrange1">
                     <variablenode value="z" subscript="20"/>
                     <variablenode value="x" subscript=""/>
-                    <numbernode value="1"/>
+                    <numbernode>1</numbernode>
                 </differentialnode>
                 <emptynode/>
             </equalnode>
@@ -160,7 +160,7 @@ p, li { white-space: pre-wrap; }
                 <differentialnode derivative="3" differential_type="lagrange3">
                     <variablenode value="z" subscript="20"/>
                     <variablenode value="x" subscript=""/>
-                    <numbernode value="3"/>
+                    <numbernode>3</numbernode>
                 </differentialnode>
                 <emptynode/>
             </equalnode>
@@ -172,7 +172,7 @@ p, li { white-space: pre-wrap; }
                 <differentialnode derivative="5" differential_type="leibnitz">
                     <variablenode value="z" subscript="20"/>
                     <variablenode value="x" subscript=""/>
-                    <numbernode value="5"/>
+                    <numbernode>5</numbernode>
                 </differentialnode>
                 <emptynode/>
             </equalnode>
