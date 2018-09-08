@@ -75,7 +75,7 @@ p, li { white-space: pre-wrap; }
                                                                                 <numbernode>7</numbernode>
                                                                                 <rootnode>
                                                                                     <numbernode>19</numbernode>
-                                                                                    <variablenode value="A" subscript=""/>
+                                                                                    <variablenode subscript="">A</variablenode>
                                                                                 </rootnode>
                                                                             </plusnode>
                                                                         </rootnode>
@@ -93,8 +93,8 @@ p, li { white-space: pre-wrap; }
                         </argumentsnode>
                     </rootnode>
                     <exponentnode>
-                        <variablenode value="ⅇ" subscript=""/>
-                        <variablenode value="π" subscript=""/>
+                        <variablenode subscript="">ⅇ</variablenode>
+                        <variablenode subscript="">π</variablenode>
                     </exponentnode>
                 </divisionnode>
                 <emptynode/>
@@ -104,14 +104,14 @@ p, li { white-space: pre-wrap; }
     <formula_entity pos_x="232" pos_y="609" type="standard" digits="0">
         <basenode>
             <definitionnode>
-                <variablenode value="z" subscript="20"/>
+                <variablenode subscript="20">z</variablenode>
                 <divisionnode>
                     <minusnode>
-                        <variablenode value="x" subscript=""/>
+                        <variablenode subscript="">x</variablenode>
                         <numbernode>1</numbernode>
                     </minusnode>
                     <plusnode>
-                        <variablenode value="x" subscript=""/>
+                        <variablenode subscript="">x</variablenode>
                         <numbernode>5</numbernode>
                     </plusnode>
                 </divisionnode>
@@ -122,8 +122,8 @@ p, li { white-space: pre-wrap; }
         <basenode>
             <equalnode>
                 <integralnode>
-                    <variablenode value="z" subscript="20"/>
-                    <variablenode value="x" subscript=""/>
+                    <variablenode subscript="20">z</variablenode>
+                    <variablenode subscript="">x</variablenode>
                 </integralnode>
                 <emptynode/>
             </equalnode>
@@ -135,8 +135,8 @@ p, li { white-space: pre-wrap; }
                 <integralnode>
                     <numbernode>0</numbernode>
                     <numbernode>10</numbernode>
-                    <variablenode value="z" subscript="20"/>
-                    <variablenode value="x" subscript=""/>
+                    <variablenode subscript="20">z</variablenode>
+                    <variablenode subscript="">x</variablenode>
                 </integralnode>
                 <emptynode/>
             </equalnode>
@@ -146,8 +146,8 @@ p, li { white-space: pre-wrap; }
         <basenode>
             <equalnode>
                 <differentialnode derivative="1" differential_type="lagrange1">
-                    <variablenode value="z" subscript="20"/>
-                    <variablenode value="x" subscript=""/>
+                    <variablenode subscript="20">z</variablenode>
+                    <variablenode subscript="">x</variablenode>
                     <numbernode>1</numbernode>
                 </differentialnode>
                 <emptynode/>
@@ -158,8 +158,8 @@ p, li { white-space: pre-wrap; }
         <basenode>
             <equalnode>
                 <differentialnode derivative="3" differential_type="lagrange3">
-                    <variablenode value="z" subscript="20"/>
-                    <variablenode value="x" subscript=""/>
+                    <variablenode subscript="20">z</variablenode>
+                    <variablenode subscript="">x</variablenode>
                     <numbernode>3</numbernode>
                 </differentialnode>
                 <emptynode/>
@@ -170,8 +170,8 @@ p, li { white-space: pre-wrap; }
         <basenode>
             <equalnode>
                 <differentialnode derivative="5" differential_type="leibnitz">
-                    <variablenode value="z" subscript="20"/>
-                    <variablenode value="x" subscript=""/>
+                    <variablenode subscript="20">z</variablenode>
+                    <variablenode subscript="">x</variablenode>
                     <numbernode>5</numbernode>
                 </differentialnode>
                 <emptynode/>
