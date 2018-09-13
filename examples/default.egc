@@ -5,7 +5,7 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Century Schoolbook L'; font-size:50pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This is a test text&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</text_entity>
-    <pic_entity pos_x="725" pos_y="174" width="281" height="301" path="images/plane.png"/>
+    <pic_entity pos_x="725" pos_y="174" width="281" height="301" format="PNG" path="images/plane.png"/>
     <formula_entity pos_x="319" pos_y="290" type="engineering" digits="0">
         <basenode>
             <equalnode>
