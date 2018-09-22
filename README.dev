@@ -69,7 +69,6 @@ Release a new software
 - verify that all tests work correctly: make egcas-tests-all
 - Change Version in top level CMakeLists.txt
 - Change CMAKE_BUILD_TYPE to 'Release' in top level CMakeLists.txt
-- Remove test formulas in mainwindow.cpp
 - start Release branches for all submodules (release/x.y.z)
 - finish Release branches for all submodules when ready
 - finish Release branch in meta project
