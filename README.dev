@@ -2,22 +2,12 @@
 meta project (top-level project) for egcas 
 
 
-Dependencies for compiling egcas (on Ubuntu 14.04LTS):
-======================================================
-sudo apt-get install qt5-default
-sudo apt-get install bison
-sudo apt-get install flex
-sudo apt-get install python-pip
-sudo apt-get install cmake
-pip install cogapp
-
-
 Dependencies to install for development:
 ========================================
-- Kubuntu 14.04 LTS or 16.04
+- Kubuntu 16.04 LTS or 18.04
 - install Qt Creator 2.0.2 (Qt 5.5) from www.qt.io  OR install the following packages: sudo apt-get install qtcreator qt5-default qtmultimedia5-dev qttools5-dev
-- sudo apt-get install flex bison build-essential cmake maxima python-pip ssh git libglu1-mesa-dev freeglut3-dev mesa-common-dev libboost-dev sbcl texinfo imagemagick inkscape
-- sudo pip install cogapp
+- sudo apt-get install flex bison build-essential cmake maxima python3-pip ssh git libglu1-mesa-dev freeglut3-dev mesa-common-dev libboost-dev sbcl texinfo imagemagick inkscape
+- sudo pip3 install cogapp
 - build with Qt Creator or with following commands
 on command line (cmake prefix path must be set to Qt libs installation to work):
   cd <BUILD_DIR>
@@ -69,6 +59,9 @@ Release a new software
 - verify that all tests work correctly: make egcas-tests-all
 - Change Version in top level CMakeLists.txt
 - Change CMAKE_BUILD_TYPE to 'Release' in top level CMakeLists.txt
-- Remove test formulas in mainwindow.cpp
 - start Release branches for all submodules (release/x.y.z)
+- finish Release branches for all submodules when ready
+- finish Release branch in meta project
+- draft a new release on github
+- upload binaries (attention - seems not to work on firefox)
 

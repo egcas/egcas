@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8.11)
 set(CMAKE_BUILD_TYPE Release)
 #set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_VERBOSE_MAKEFILE ON)
-set(EGCAS_VERSION "0.0.2")
+set(EGCAS_VERSION "0.0.3")
 
 ##############################################################################
 ##############################################################################
@@ -14,6 +14,9 @@ if(${CMAKE_BUILD_TYPE} MATCHES "Release")
 endif()
 # set egcas version as define for C++ program
 add_definitions(-DEGCAS_VERSION="${EGCAS_VERSION}")
+set(EGCAS_MANUAL_INSTALL_PATH_LINUX_PATH /usr/share/doc/egcas/)
+add_definitions(-DEGCAS_MANUAL_INSTALL_PATH_DEV="${CMAKE_CURRENT_SOURCE_DIR}/doc/manual.pdf")
+add_definitions(-DEGCAS_MANUAL_INSTALL_PATH_LINUX="${EGCAS_MANUAL_INSTALL_PATH_LINUX_PATH}/manual.pdf")
 set(MAXIMA_INST_PATH maxima_installation)
 
 add_subdirectory(libmml_egcas)
@@ -43,6 +46,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "${CMAKE_CURRENT_SOURCE_DIR}/desktop/postinst;${CMAKE_CURRENT_SOURCE_DIR}/desktop/prerm")
         install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/pics/egcas_32x32.png DESTINATION /usr/share/pixmaps)
         install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/desktop/egcas.desktop DESTINATION /usr/share/applications)
+        install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/doc/manual.pdf DESTINATION ${EGCAS_MANUAL_INSTALL_PATH_LINUX_PATH})
         set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${CPACK_DEBIAN_REVISON}_${SYSTEM_ARCH}")
 elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
         set(CPACK_PACKAGE_INSTALL_DIRECTORY "egcas")
