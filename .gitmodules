@@ -7,3 +7,6 @@
 [submodule "egcas-core"]
 	path = egcas-core
 	url = ../egcas-core.git
+[submodule "MRichTextEditor"]
+	path = MRichTextEditor
+	url = ../MRichTextEditor.git
