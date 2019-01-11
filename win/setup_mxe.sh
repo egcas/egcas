@@ -38,17 +38,17 @@ else
 fi
 cd mxe
 MXE_INSTALL_PATH=${PWD}
-make -j4 MXE_TARGETS='i686-w64-mingw32.shared.posix' cmake qt5 gcc gdb boost nsis 
+make -j4 MXE_TARGETS='i686-w64-mingw32.shared' cmake qt5 gcc gdb boost nsis 
 
 #setup config vars and write config file
 echo export MXE_INSTALL_PATH="${MXE_INSTALL_PATH}" >> "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 echo export PATH="${MXE_INSTALL_PATH}"/usr/bin:${PATH} >> "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
-echo export MXE_COMMON_INSTALL_PATH="${MXE_INSTALL_PATH}/usr/i686-w64-mingw32.shared.posix/" >> "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
+echo export MXE_COMMON_INSTALL_PATH="${MXE_INSTALL_PATH}/usr/i686-w64-mingw32.shared/" >> "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 source "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 echo export MXE_QT_INSTALL_PATH="${MXE_COMMON_INSTALL_PATH}/qt5/" >> "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 source "${MXE_ABS_BUILD_DIR}/${MXE_CONFIG_FILE}"
 
-cp /usr/include/FlexLexer.h "${MXE_INSTALL_PATH}"/usr/i686-w64-mingw32.shared.posix/include/
+cp /usr/include/FlexLexer.h "${MXE_INSTALL_PATH}"/usr/i686-w64-mingw32.shared/include/
 
 # copy runtime libraries to runtime pos
 cd "${MXE_ABS_BUILD_DIR}"
