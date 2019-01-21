@@ -2,13 +2,16 @@ cmake_minimum_required(VERSION 2.8.11)
 
 ##############################################################################
 
-#set(CMAKE_BUILD_TYPE Release)
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
+#set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 set(EGCAS_VERSION "0.0.3")
 
 ##############################################################################
 ##############################################################################
+#set the directory for common cmake modules for this project
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+
 if(${CMAKE_BUILD_TYPE} MATCHES "Release")
         add_definitions(-DQT_NO_DEBUG_OUTPUT)
 endif()
@@ -29,6 +32,7 @@ set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "* egcas is a Easy to use Graphical Comput
 set(CPACK_PACKAGE_VENDOR "Johannes Maier")
 set(CPACK_PACKAGE_VERSION ${EGCAS_VERSION})
 set(SYSTEM_ARCH "all")
+
 if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         execute_process(COMMAND ${CMAKE_CURRENT_LIST_DIR}/scripts/get-os.sh OUTPUT_VARIABLE CPACK_DEBIAN_REVISON)
         string(STRIP ${CPACK_DEBIAN_REVISON} CPACK_DEBIAN_REVISON)
