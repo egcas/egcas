@@ -27,6 +27,11 @@ add_subdirectory(egcas-core)
 add_subdirectory(egcas_maxima)
 add_subdirectory(MRichTextEditor)
 
+
+add_qt_lib_for_installation(qt5Core)
+
+message(WARNING ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS})
+
 set(CPACK_PACKAGE_NAME "egcas")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "* egcas is a Easy to use Graphical Computer Algebra System.")
 set(CPACK_PACKAGE_VENDOR "Johannes Maier")
