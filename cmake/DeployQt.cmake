@@ -20,13 +20,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-find_package(Qt5Core REQUIRED)
-
-# Retrieve the absolute path to qmake and then use that path to find
-# the windeployqt and macdeployqt binaries
-get_target_property(_qmake_executable Qt5::qmake IMPORTED_LOCATION)
-get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
-
 
 find_program(WINDEPLOYQT_EXECUTABLE windeployqt HINTS "${_qt_bin_dir}")
 if(WIN32 AND NOT WINDEPLOYQT_EXECUTABLE)
@@ -42,12 +35,10 @@ endif()
 # Add commands that copy the required Qt files to the same directory as the
 # target after being built as well as including them in final installation
 function(add_qt_lib_for_installation library)
-    get_target_property(_qmake_executable Qt5::qmake IMPORTED_LOCATION)
-    get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
-    set(_qt_lib_dir "${_qt_bin_dir}/../lib")
-    message(WARNING ${_qt_lib_dir})
-    message(WARNING ${_qmake_executable})
-    list(APPEND CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS "${_qt_lib_dir}/${library}")
+    find_package(Qt5 COMPONENTS Core REQUIRED)
+    get_target_property(qt_core_dir Qt5::Core LOCATION)
+    get_filename_component(qt_lib_dir "${qt_core_dir}" DIRECTORY)
+    list(APPEND CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS "${qt_lib_dir}/${library}")
     set (CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS  ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} PARENT_SCOPE)
 endfunction()
 
