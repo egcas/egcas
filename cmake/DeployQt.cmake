@@ -36,9 +36,8 @@ endif()
 # target after being built as well as including them in final installation
 function(add_qt_lib_for_installation library)
     find_package(Qt5 COMPONENTS Core REQUIRED)
-    get_target_property(qt_core_dir Qt5::Core LOCATION)
-    get_filename_component(qt_lib_dir "${qt_core_dir}" DIRECTORY)
-    list(APPEND CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS "${qt_lib_dir}/${library}")
+    get_target_property(qt_lib Qt5::${library} LOCATION)
+    list(APPEND CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS "${qt_lib}")
     set (CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS  ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} PARENT_SCOPE)
 endfunction()
 
