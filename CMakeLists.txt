@@ -14,6 +14,10 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 if(${CMAKE_BUILD_TYPE} MATCHES "Release")
         add_definitions(-DQT_NO_DEBUG_OUTPUT)
+        IF(MINGW)
+                set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -s")
+                set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -s")
+        endif()
 endif()
 # set egcas version as define for C++ program
 add_definitions(-DEGCAS_VERSION="${EGCAS_VERSION}")

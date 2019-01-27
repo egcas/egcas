@@ -41,6 +41,24 @@ function(add_qt_lib_for_installation library)
     set (CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS  ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} PARENT_SCOPE)
 endfunction()
 
+# Add library given to be list of libraries to be installed installed. If no path is given, the path of the current binary directory is used
+function(add_lib_for_installation library)
+    list(APPEND CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS "${CMAKE_CURRENT_BINARY_DIR}/${library}")
+    set (CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS  ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} PARENT_SCOPE)
+endfunction()
+
+#run windeployqt on the given target after build
+function(run_windeployqt target)
+    find_package(Qt5 COMPONENTS Core REQUIRED)
+    get_target_property(qt_lib Qt5::Core LOCATION)
+    get_filename_component(qt_bin_path "${qt_lib}" DIRECTORY)
+    # Run windeployqt immediately after build
+    add_custom_command(TARGET ${target} POST_BUILD
+        COMMAND "${qt_bin_path}/windeployqt.exe" "${target}.exe"
+        COMMENT "Deploying Qt..."
+    )
+endfunction()
+
 # Add commands that copy the required Qt files to the same directory as the
 # target after being built as well as including them in final installation
 function(windeployqt target)

@@ -44,9 +44,27 @@ e.g. "make egCAS"
 
 Building under windows (only egcas until now)
 =============================================
-Install chocolatey package management. Install in chocolatey the winflexbison2 and pyhton2 package.
+Install chocolatey package management. Install in chocolatey the following packages (via "choco install" on command line):
+ - cmake
+ - git
+ - jdk8
+ - nsis
+ - python3
+ 
 Install Qt Creator (choose mingw as compiler during installation).
-execute pip install cogapp on command line.
+
+Add the following pathes to the %PATH% variable (examples adjust paths):
+  C:\Program Files\Java\jdk1.8.0_191\bin
+  C:\Program Files\CMake\bin
+  C:\Program Files (x86)\NSIS\Bin
+  C:\Qt\Tools\mingw530_32\bin
+  C:\Qt\5.11.2\mingw53_32\bin
+  C:\python3\
+  C:\python3\Scripts\
+
+execute pip3 install cogapp on command line.
+To build the installer for windows execute:
+	cmake --build . --target package --config Release
 
 
 switch to clang on linux (for compilation):
