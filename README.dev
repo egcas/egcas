@@ -70,7 +70,8 @@ Add the following pathes to the %PATH% variable (examples adjust paths):
 
 execute pip3 install cogapp on command line.
 To build the installer for windows execute:
-	cmake --build . --target package --config Release
+        cmake .. -G "MinGW Makefiles"
+        cmake --build . --target package --config Release
 
 
 switch to clang on linux (for compilation):
