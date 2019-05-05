@@ -48,7 +48,7 @@ Building with MXE (crosscompiling for windows) on Ubuntu 16.04 64bit:
 Now the required targets can be built in the generated build directory "build_win" as usual:
 e.g. "make egCAS"
 
-Building under windows (only egcas until now)
+Building under windows
 =============================================
 Install chocolatey package management. Install in chocolatey the following packages (via "choco install" on command line):
  - cmake
@@ -72,6 +72,8 @@ execute pip3 install cogapp on command line.
 To build the installer for windows execute:
         cmake .. -G "MinGW Makefiles"
         cmake --build . --target package --config Release
+        or:
+        mingw32-make.exe package
 
 
 switch to clang on linux (for compilation):
